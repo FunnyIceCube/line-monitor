@@ -1,6 +1,7 @@
 package com.lzh.linemonitor;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,5 +18,7 @@ public class SimpleController {
     public String hello() {
         return "Greetings from 大腿!<br/><br/>Hello fufu怡~";
     }
+
+
 
 }

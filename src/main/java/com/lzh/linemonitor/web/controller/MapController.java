@@ -1,4 +1,4 @@
-package com.lzh.linemonitor;
+package com.lzh.linemonitor.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

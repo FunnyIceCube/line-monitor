@@ -1,7 +1,6 @@
-package com.lzh.linemonitor;
+package com.lzh.linemonitor.web.controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

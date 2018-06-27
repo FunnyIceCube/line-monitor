@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.lzh.linemonitor.pojo.BangumiVO;
 import com.lzh.linemonitor.utils.FileUtil;
 import com.lzh.linemonitor.utils.OkHttpUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,7 +48,12 @@ public class BangumiController {
         BangumiVO bangumiVO = new BangumiVO();
         bangumiVO.setName(bangumiJson.getString("anime"));
         bangumiVO.setNameCn(bangumiJson.getString("title_chinese"));
-        bangumiVO.setEpisode(bangumiJson.getIntValue("episode"));
+        String epStr = bangumiJson.getString("episode");
+        if (StringUtils.isNotBlank(epStr)) {
+            bangumiVO.setEpisode(Integer.parseInt(epStr));
+        } else {
+            bangumiVO.setEpisode(1);
+        }
         bangumiVO.setPosition(bangumiJson.getIntValue("at"));
         bangumiVO.setSimilar((int) (bangumiJson.getFloatValue("similarity")*100));
 

@@ -1,6 +1,7 @@
 package com.lzh.linemonitor.pojo;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
 
 /**
  * @author: Lu Zhaohui
@@ -8,6 +9,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @date: Created on 2018/6/24
  * @modified By:
  */
+@Data
 public class BangumiVO {
 
     private String name;
@@ -18,36 +20,8 @@ public class BangumiVO {
 
     private int episode;
 
+    private int similar;
 
-    public String getName() {
-        return name;
-    }
+    private String bilibiliUrl;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
-    }
-
-    public int getEpisode() {
-        return episode;
-    }
-
-    public void setEpisode(int episode) {
-        this.episode = episode;
-    }
-
-    public String getNameCn() {
-        return nameCn;
-    }
-
-    public void setNameCn(String nameCn) {
-        this.nameCn = nameCn;
-    }
 }
